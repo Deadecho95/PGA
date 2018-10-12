@@ -1,0 +1,596 @@
+/* CSS Document */
+@charset "UTF-8";
+
+@font-face {
+    font-family:     'candara';
+
+    src: url('fonts/candara-webfont.eot');
+    src: url('fonts/candara-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/candara-webfont.woff') format('woff'),
+         url('fonts/candara-webfont.ttf') format('truetype'),
+         url('fonts/candara-webfont.svg#candararegular') format('svg');
+    font-weight: normal;
+/*    font-style: normal;*/
+}
+
+@font-face {
+	font-family:     'Cambria';
+	src: url('fonts/Cambria.eot?') format('eot'), 
+	     url('fonts/Cambria.woff') format('woff'), 
+	     url('fonts/Cambria.ttf')  format('truetype'),
+	     url('fonts/Cambria.svg#Cambria') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* ******************************************************************************************************** */ 
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* **                             Définition pour les balises HTML standard                              ** */ 
+/* **                                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+/* ******************************************************************************************************** */ 
+
+body {
+	display:          block;
+  
+	font:             100% 'candara' /*Verdana, Arial, Helvetica, sans-serif*/;
+	font-smoothing:   antialiased;
+
+	margin:           0 auto;
+	padding:          0;	
+
+	text-align:       center; 
+	color:            black;
+	
+	background-color: rgba(172,163,154,0.25);
+}
+
+a:link    { color:     #0000ff; text-decoration: none; }		/* unvisited link */
+a:visited { color:     #800080; text-decoration: overline; } 	/* visited link */
+/*a:hover { color:    #FF00FF;}  								/* mouse over link */
+/*a:active { color:    #0000FF;}  								/* selected link */
+
+p, ul, ol { 
+	margin:            9px 0px 3px 10px !important;
+	
+	font-size:         14px;
+	font-weight:       normal;
+	
+	line-height:       auto;
+	
+	text-align:        justify; 
+	text-transform:    none; 
+	text-decoration:   none; 
+}
+
+ul {
+	margin:            0 !important;
+	padding:           0;
+	background:        white;
+}
+
+li {
+	display:           block;
+	margin:            0;
+	border-left:       #ccc 1px solid;
+	border-bottom:     #ccc 1px solid;
+	border-right:      #ccc 1px solid;
+}
+
+li a { 
+	display:           block;
+	text-decoration:   none !important;
+	color:             #000000 !important;
+	padding:           6px 15px !important;
+}
+
+li a:hover {
+	background-color:  #4B0A1E !important;
+	color:             #BA8A92 !important;
+	padding:           6px 15px !important;
+}
+
+button, input[type=button]  {
+	padding:           5px 25px;
+
+	border:            #666 1px solid;
+	background:        #888;
+	color:             white;
+	
+        border-radius: 4px; 
+   -moz-border-radius: 4px; 
+ -khtml-border-radius: 4px; 
+-webkit-border-radius: 4px;
+
+           box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+      -moz-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+    -khtml-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+}
+
+input[type=text] {
+	margin:            5px 5px;
+	padding:           5px;
+	width:             200px !important;
+	outline:           none;
+
+	border:            1px solid #ccc;
+
+        border-radius: 4px; 
+   -moz-border-radius: 4px; 
+ -khtml-border-radius: 4px; 
+-webkit-border-radius: 4px;
+
+           box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+      -moz-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+    -khtml-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+}
+
+textarea {
+	display:           block;
+	border:            1px solid #ccc;
+
+	margin:            5px 5px 15px 5px;
+	
+	min-width:         200px;
+	max-width:         290px;
+
+	min-height:        80px;
+	max-height:        160px;
+	outline:           none;
+
+           box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+      -moz-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+    -khtml-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+}
+
+label {
+	display:           block;
+	margin:            5px 0 0 0;
+}
+
+
+
+/* ******************************************************************************************************** */ 
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* ** Main                                                                                               ** */ 
+/* **                                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+/* ******************************************************************************************************** */ 
+
+.restful #main {
+	display:           block;
+
+	margin:            10px auto;
+	padding:           10px 15px 5px 15px;
+	
+	min-width:         640px;
+	max-width:         1024px;
+	
+	line-height:       normal;
+	text-align:        center;
+	
+	overflow:          hidden;
+	background:        white;
+ 	border:            none;
+	
+        border-radius: 15px; 
+   -moz-border-radius: 15px; 
+ -khtml-border-radius: 15px; 
+-webkit-border-radius: 15px;
+
+           box-shadow: 0 0 35px rgba(0,0,0,0.25); 
+      -moz-box-shadow: 0 0 35px rgba(0,0,0,0.25); 
+    -khtml-box-shadow: 0 0 35px rgba(0,0,0,0.25); 
+   -webkit-box-shadow: 0 0 35px rgba(0,0,0,0.25); 
+}
+
+
+/* ******************************************************************************************************** */ 
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* ** Header & Footer                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+/* ******************************************************************************************************** */ 
+
+.restful header {
+	background:        url(img/logo/HEI.png) top right no-repeat;
+	height:            100px !important;
+	margin:            auto 0;
+}
+
+.restful footer {
+	background:        url(img/logo/picto.png) left top no-repeat, url(img/logo/vsExcel.png) right top no-repeat;
+	height:            30px !important;
+	margin:            10px 0;
+	
+	color:             #777;
+	font-size:         12px;
+	text-align:        center;
+	line-height:       3;
+
+}
+
+.restful table {
+	width: 				100% !important;
+	vertical-align: 	top;
+}
+
+.restful table.modbus th {
+	font-family:       	'Cambria';
+	font-weight:       	bold;
+	font-style:        	normal;
+
+	text-align: 		center;
+	text-transform:    	none;
+	text-decoration:   	none;
+	color:             	#069;
+	
+	text-shadow: 		1px 1px 2px rgba(  0,  0,  0,0.20) !important;
+	font-size: 			16px;
+	line-height: 		16px !important; 
+	margin: 			15px 10px 10px 10px !important;
+	padding: 			10px;
+	 
+	border: 			none /*black 1px solid*/;
+}
+
+.restful table.modbus td {
+	border: 			none /*gray 1px solid*/;
+	vertical-align: 	text-top top !important;
+}
+
+.restful table.modbus tr {
+	border: 			none /*gray 1px solid*/;
+	vertical-align: 	text-top top !important;
+}
+
+.restful table.modbus tbody {
+	margin: 			0 auto !important;
+	vertical-align: 	text-top top !important;
+}
+
+
+/* ******************************************************************************************************** */ 
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* ** Content                                                                                            ** */ 
+/* **                                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+/* ******************************************************************************************************** */ 
+.restful #content {
+	clear:             both;
+	display:           block;
+	
+	margin:            10px auto;
+	padding:           0;
+	
+	border:            none;
+	min-height:        300px !important;
+}
+
+.restful #ezhmiContent {
+	display:           block;
+	margin:            10px auto !important;
+	padding:           10px;
+	overflow:          hidden;	
+/*	background-color:  rgba(172,163,154,0.25);*/
+	background:        white/*#efefef*/;
+
+	border:            #bbb 1px solid;
+        border-radius: 15px; 
+   -moz-border-radius: 15px; 
+ -khtml-border-radius: 15px; 
+-webkit-border-radius: 15px;
+
+           box-shadow: inset 0 0 10px rgba(0,0,0,0.25); 
+      -moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.25); 
+    -khtml-box-shadow: inset 0 0 10px rgba(0,0,0,0.25); 
+   -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.25); 
+}
+
+.restful #searchKey {
+	width:             200px;
+}
+
+
+
+
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* **	Gestion des cadres flottants                                                                     ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+/* FLOAT positioning */
+.fLeft  { float: left  !important; }
+.fRight { float: right !important; }
+.fNone  { float: none  !important; }
+
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* **	Gestion des encadrements                                                                         ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+
+/* ******************************************************************************************************** */ 
+/* the "framed"	                                                                                         ** */
+/* ******************************************************************************************************** */ 
+.restful .framed, .restful .noFramed {
+	margin:            10px !important;
+	padding:           0 !important;
+	overflow:          hidden;
+}
+
+.restful .framed {
+	border:            #777777 1px solid;
+
+        border-radius: 5px; 
+   -moz-border-radius: 5px; 
+ -khtml-border-radius: 5px; 
+-webkit-border-radius: 5px;
+
+           box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+      -moz-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+    -khtml-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.25); 
+
+    background:        none;
+}
+
+.restful .noTitle { background: none !important; }
+
+.restful .floating {
+	display: 			inline-block !important;
+	padding: 			0px;
+	margin: 			0px !important;
+	width: 				44% !important;
+	border:				none /*lightGray 1px solid*/;
+/*	 	 width: auto; */
+}
+.restful .txtRight {
+	padding: 			5px;
+	text-align: 		right !important;
+}
+
+.restful .txtLeft {
+	padding: 			5px;
+	text-align: 		left !important;
+}
+
+.restful img.energy {
+	height: 70px !important;
+	margin: 5px;
+}
+
+.restful div.energy {
+	display: inline-block;
+	margin: 0 auto !important;
+	padding: 0 10px;
+	height: auto !important;
+	border: none /*black 1px solid*/;
+	align-content: center;
+}
+
+.restful div.energy .last {
+	display: block;
+}
+
+.restful div.energy .first {
+	margin-left: 250px;
+}
+
+.restful div.coils {
+	display: block;
+	height: auto !important;
+	width: 100%;
+	border: gray 1px solid;
+}
+
+
+
+
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* **	Gestion des classes de Titre                                                                     ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+
+/* ******************************************************************************************************** */ 
+/* **	Definition de la police de caractère (font property)                                               ** */ 
+/* ******************************************************************************************************** */ 
+.restful h1, .restful h2, .restful h3, .restful h4, .restful h5, .restful h6 {
+	font-family:       	'Cambria';
+	font-weight:       	bold;
+	font-style:        	normal;
+}
+
+/* ******************************************************************************************************** */ 
+/* **	Alignement et style (text property)	                                                             ** */ 
+/* ******************************************************************************************************** */ 
+.restful h1, .restful h3, .restful h5 {
+	text-align:        	Left;
+	text-transform:    	none;
+	text-decoration:   	none;
+	color:             	#666;
+}
+
+.restful h2, .restful h4, .restful h6 {
+	text-align:        	Left;
+	text-transform:    	none;
+	text-decoration:   	none;
+	color:             	#069;
+}
+
+/* ******************************************************************************************************** */ 
+/* **	Text shadow				                                                                         ** */ 
+/* ******************************************************************************************************** */ 
+.restful h1 { text-shadow: 3px 3px 9px rgba(102,102,102,0.35) !important; }
+.restful h2 { text-shadow: 2px 2px 5px rgba(  0,  0,  0,0.20) !important; }
+.restful h3 { text-shadow: 1px 1px 3px rgba(102,102,102,0.35) !important; }
+.restful h4 { text-shadow: 1px 1px 2px rgba(  0,  0,  0,0.20) !important; }
+.restful h5 { text-shadow: 1px 1px 1px rgba(102,102,102,0.35) !important; }
+.restful h6 { text-shadow: 1px 1px 1px rgba(  0,  0,  0,0.20) !important; }
+
+/* ******************************************************************************************************** */ 
+/* **	Dimension (Size)                                                                                 ** */ 
+/* ******************************************************************************************************** */ 
+.restful h1 { font-size: 36px; line-height: auto !important; margin: auto 10px           !important; padding: auto 0 !important; }
+.restful h2 { font-size: 24px; line-height: 24px !important; margin: 35px 10px 10px 10px !important; }
+.restful h3 { font-size: 18px; line-height: 18px !important; margin: 25px 10px 10px 10px !important; }
+.restful h4 { font-size: 16px; line-height: 16px !important; margin: 15px 10px 10px 10px !important; }
+.restful h5 { font-size: 14px; line-height: 14px !important; margin: 10px 10px 10px 10px !important; }
+.restful h6 { font-size: 14px; line-height: 14px !important; margin:  8px 10px 10px 10px !important; }
+
+
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* **	Gestion des contenus                                                                             ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+
+.restful div.left {
+	float:             left;
+	width:             160px !important;
+	height:            100%;
+}
+
+.restful td.left {
+	width:             160px !important;
+	height:            100%;
+}
+
+.restful div.center {
+	align-content: 		center !important;
+	margin: 			0px auto !important;
+	border: 			none;
+	display: 			block;
+	overflow: 			hidden;
+	height: 			auto;
+	width: 				100% !important;
+}
+
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* **	Classes génériques                                                                               ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+
+.restful, .restful .normal { 
+	font-size:         14px;
+	font-weight:       normal;
+	
+	line-height:       auto;
+	
+	text-align:        justify; 
+	text-transform:    none; 
+	text-decoration:   none; 
+}
+
+.restful .header {
+	padding:           5px 0 0 0;
+}
+
+.restful .leftArea {
+	float:             left;
+	margin:            10px !important;
+/*	width:             45% !important;
+*/	border-top:        #ccc 1px solid;
+	border-right:      #ccc 1px solid;
+}
+
+.restful .mainArea {
+	float:             left;
+	margin:            10px !important;
+	width:             auto !important;
+}
+
+.restful .rightArea {
+	float:             left;
+	margin:            10px !important;
+/*	width:             45% !important;
+*/	border-top:        #ccc 1px solid;
+}
+
+.restful .exemple {
+	color:             #666;
+	font-family:       sans-serif;
+	font-style:        italic;
+	text-align:        left;
+	margin:            0 0 3px 50px !important;
+}
+
+.restful .image {
+	float:             none;
+	margin:            5px         !important;
+	text-align:        center;
+}
+
+.restful .button {
+	margin:            20px auto;
+	text-align:        center;
+}
+
+
+
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* ** Alignement's Classes                                                                               ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+
+.restful .middle {
+	vertical-align:    middle       !important;
+}
+
+.restful .top {
+	vertical-align:    text-top     !important;
+}
+
+.restful .bot {
+	vertical-align:    text-bottom  !important;
+}
+
+.restful .center {
+	text-align:        center       !important;
+}
+
+
+/* ******************************************************************************************************** */ 
+/* **                                                                                                    ** */ 
+/* ** Color's Classes                                                                                    ** */ 
+/* **                                                                                                    ** */ 
+/* ******************************************************************************************************** */ 
+.restful .gray {
+	color:				#aaa;
+}
+
+.restful .darkGray {
+	color:				#888;
+}
+
+.restful .anthracit {
+	color:				#555;
+}
+
+.restful .red {
+	color:				red;
+}
+
+.restful .darkRed {
+	color:				darkRed;
+}
+

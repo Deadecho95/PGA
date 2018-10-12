@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hes-so Valais//Wallis - EA WebSocket Client</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/restful.css" />
+	<link rel="stylesheet" type="text/css" href="css/btnOnOff.css" />
+	<script type="text/javascript" src="js/ezhmiWebSocket.js"></script>
+
+	<script type="text/javascript">
+		window.addEventListener("load", connect, false);
+	</script>
+</head>
+<body class="restful">
+
+	<div id="main">
+		
+		<!-- Header -->
+		<header class="bot"><h1 style="padding-top: 20px !important;">EZHMI WebSocket Client 221_SIn</h1></header>
+		
+		<!-- Content -->
+		<div id="content">
+			<!--<h1 class="center">Web Server for SDi</h1>-->
+			<h2 class="center">RESTful Web Service Training</h2>
+			<h3 class="center">EZHMI Interface</h3>
+			
+			<!-- EZHMI content -->
+			<div id="ezhmiContent">
+				
+				<!-- webSocket message -->
+				<div>
+					<label class="darkGray floating txtRight">WebSocket Messages: </label>
+					<label class="floating txtLeft" id="wsMessage">WebSocket messages will go here...</label>
+				</div>
+				
+				<table class="modbus">
+					<caption></caption>
+					<thead>
+						<tr>
+							<th colspan="4">Input registers</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td width="25%"        class="darkGray txtRight">SOLAR_STRING0_I_FLOAT</td>
+							<td width="25%"><input class="txtLeft"type="text" disabled="true" id="SOLAR_STRING0_I_FLOAT" value=""/></td>
+							<td width="25%">&nbsp;</td>
+							<td width="25%">&nbsp;</td>
+						</tr>
+						<tr>
+							<td        class="darkGray txtRight">SOLAR_STRING1_I_FLOAT</td>
+							<td><input class="txtLeft"  type="text" disabled="true" id="SOLAR_STRING1_I_FLOAT" value=""/></td>
+							<td><input class="txtRight" type="text" disabled="true" id="SOLAR_STRING2_I_FLOAT" value=""/></td>
+							<td        class="darkGray txtLeft">SOLAR_STRING2_I_FLOAT</td>
+						</tr>
+						<tr>
+							<td        class="darkGray txtRight">SOLAR_U_FLOAT</td>
+							<td><input class="txtLeft"  type="text" disabled="true" id="SOLAR_U_FLOAT" value=""/></td>
+							<td><input class="txtRight" type="text" disabled="true" id="SOLAR_P_FLOAT" value=""/></td>
+							<td        class="darkGray txtLeft">SOLAR_P_FLOAT</td>
+						</tr>
+						<tr>
+							<td        class="darkGray txtRight">BATT_CHRG_FLOAT</td>
+							<td><input class="txtLeft"  type="text" disabled="true" id="BATT_CHRG_FLOAT" value=""/></td>
+							<td><input class="txtRight" type="text" disabled="true" id="BATT_P_FLOAT" value=""/></td>
+							<td        class="darkGray txtLeft">BATT_P_FLOAT</td>
+						</tr>
+						<tr>
+							<td        class="darkGray txtRight">COAL_T_FLOAT</td>
+							<td><input class="txtLeft"  type="text" disabled="true" id="COAL_T_FLOAT" value=""/></td>
+							<td        colspan="2">&nbsp;</td>
+						</tr>
+						<tr>
+							<td        class="darkGray txtRight">COAL_P_FLOAT</td>
+							<td><input class="txtLeft"  type="text" disabled="true" id="COAL_P_FLOAT" value=""/></td>
+							<td><input class="txtRight" type="text" disabled="true" id="COAL_U_FLOAT" value=""/></td>
+							<td        class="darkGray txtLeft">COAL_U_FLOAT</td>
+						</tr>
+						<tr>
+							<td        class="darkGray txtRight">GRID_P_FLOAT</td>
+							<td><input class="txtLeft"  type="text" disabled="true" id="GRID_P_FLOAT" value=""/></td>
+							<td><input class="txtRight" type="text" disabled="true" id="GRID_U_FLOAT" value=""/></td>
+							<td        class="darkGray txtLeft" >GRID_U_FLOAT</td>
+						</tr>
+						<tr>
+							<td        class="darkGray txtRight">BAR_U_FLOAT</td>
+							<td><input class="txtLeft" type="text" disabled="true" id="BAR_U_FLOAT" value=""/></td>
+							<td        colspan="2">&nbsp;</td>
+						</tr>
+						<tr><td colspan="4">&nbsp;</td></tr>
+						<tr>
+							<th colspan="4">Coils</th>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td colspan="2">
+								<div class="energy last">
+									<img class="energy" src="images/ea/grid.png"/><br/>
+									<input class="btnOnOff" id="GRID_SW" type="checkbox" onclick="toggleSwitch(this);"/>
+									<label class="lblOnOff" for="GRID_SW"><i/></label>
+								</div>
+								<div class="energy">
+									<img class="energy" src="images/ea/battery.png"/><br/>
+									<input class="btnOnOff" id="BATT_SW" type="checkbox" onclick="toggleSwitch(this);"/>
+									<label class="lblOnOff" for="BATT_SW"><i/></label>
+								</div>
+								<div class="energy">
+									<img class="energy" src="images/ea/solarPanel.png"/><br/>
+									<input class="btnOnOff" id="SOLAR_SW" type="checkbox" onclick="toggleSwitch(this);"/>
+									<label class="lblOnOff" for="SOLAR_SW"><i/></label>
+								</div>
+								<div class="energy">
+									<img class="energy" src="images/ea/CoalPowerplant.png"/><br/>
+									<input class="btnOnOff" id="COAL_SW" type="checkbox" onclick="toggleSwitch(this);"/>
+									<label class="lblOnOff" for="COAL_SW"><i/></label>
+								</div>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div> 	<!-- <div id="content"> -->
+		
+		<!-- Footer -->
+		<footer>WebSocket Demonstrator for SIn Module</footer>	
+	</div> <!-- <div id="main"> -->
+</body>
+</htmlSOLAR_SW>
